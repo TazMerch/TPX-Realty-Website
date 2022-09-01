@@ -7,38 +7,97 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
+  text-transform: uppercase;
+  margin:0;
 }
 
 .container {
   display: grid;
-  box-sizing: border-box;
   height: 100vh;
-  grid-template-rows: auto auto 1fr auto;
+  grid-template-rows: auto auto auto auto;
 }
 
-.header {
-  background-color: lightgray;
-  border-bottom: 2px solid darkgray;
-  text-align: center;
-  padding: 4px;
+#navbar {
+  filter: drop-shadow(0px 0px 4px black);
+  text-shadow: .5px .5px 1px #000000a0;
+  display: grid;
+  grid-template-columns: 5fr repeat(4, 1fr);
+  background-image: url(pics/Black\ and\ Gold\ Graident.jpg);
+  background-size: cover;
+  overflow: visible;
 }
 
-.nav {
-  background-color: lightgray;
-  border-bottom: 2px solid darkgray;
-  text-align: center;
-  padding: 4px;
+#navbar h4 {
+  color: white;
+  text-align: left;
+  align-self: center;
+  font-weight: normal;
+  font-size: 9PX;
+  padding-left: 5px;
 }
 
-.section {
-  background-color: lightgray;
-  border-bottom: 2px solid darkgray;
+#navbar a {
+  text-decoration: none;
+  color: white;
+  padding:8px 5px 8px 5px;
+  font-size: 9px;
   text-align: center;
-  padding: 4px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: darkgoldenrod;
+  color: white;
+}
+
+.hero {
+  box-sizing: border-box;
+  background-image: url(pics/mainbackground.jpg);
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: top ;
+}
+
+.content {
+  overflow: auto;
+  grid-template-rows: 1fr 1fr;
+  display: grid;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.715));
+  height: 100vh;
+  justify-content: center;
+}
+
+.content img {
+  position: relative;
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  width: 200px;
+}
+
+.box {
+  text-align: center;
+  margin-top: 10vh;
+  position:relative;
+  background-color: rgb(255, 255, 255);
+  height: 80px;
+  width: 300px;
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.301));
+  border-radius: 4px;
+  border: solid darkgray 1px;
 }
 
 .footer {
-  background-color: lightgray;
   text-align: center;
-  padding: 4px;
+  font-size: 7px;
+  padding: 10px;
+  color: white;
+  background-image: url(pics/Black\ and\ Gold\ Graident.jpg);
+  background-size: cover;
 }
