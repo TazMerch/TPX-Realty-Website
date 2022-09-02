@@ -1,3 +1,23 @@
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from{
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 *{
   box-sizing: border-box;
   padding:0;
@@ -8,90 +28,92 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
-  margin:0;
+  background-image: url(pics/mainbackground.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  line-height: 1.6;
+  color: rgb(0, 0, 0);
+  text-shadow: .5px .5px .5px rgb(100, 100, 100);
 }
 
-.container {
-  display: grid;
-  height: 100vh;
-  grid-template-rows: auto auto auto auto;
+.hero {
+  overflow: visible;
+  height: 92vh;
+  background-image: url(pics/tpxlogo.png);
+  background-size: 80vh;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-#navbar {
-  filter: drop-shadow(0px 0px 4px black);
-  text-shadow: .5px .5px 1px #000000a0;
-  display: grid;
-  grid-template-columns: 5fr repeat(4, 1fr);
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+  font-size: 9px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+
+.navbar {
   background-image: url(pics/Black\ and\ Gold\ Graident.jpg);
   background-size: cover;
-  overflow: visible;
-}
-
-#navbar h4 {
   color: white;
-  text-align: left;
-  align-self: center;
-  font-weight: normal;
-  font-size: 9PX;
-  padding-left: 5px;
+  height: 30px;
+  filter: drop-shadow(.5px .5px 2px  rgb(3, 3, 3))
+}
+.navbar ul{
+  display: flex;
 }
 
-#navbar a {
-  text-decoration: none;
+.navbar a {
   color: white;
-  padding:8px 5px 8px 5px;
-  font-size: 9px;
-  text-align: center;
+  padding: 10px;
 }
 
-#navbar a:hover {
+.navbar a:hover {
+  animation:fadeIn 1s;
   background-color: #ddd;
   color: black;
 }
 
-#navbar a.active {
+.navbar a.active{
+  animation: fadeOut 0s;
   background-color: darkgoldenrod;
   color: white;
 }
 
-.hero {
-  box-sizing: border-box;
-  background-image: url(pics/mainbackground.jpg);
-  background-size: cover;
-  height: 100vh;
-  background-attachment: fixed;
-  background-position: top ;
+.navbar .flex {
+  justify-content: space-between;
 }
 
-.content {
-  overflow: auto;
-  grid-template-rows: 1fr 1fr;
-  display: grid;
-  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.715));
-  height: 100vh;
+.flex {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-.content img {
-  position: relative;
-  margin-top: 10vh;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  width: 200px;
+.container {
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 10px;
 }
 
-.box {
-  text-align: center;
-  margin-top: 10vh;
-  position:relative;
-  background-color: rgb(255, 255, 255);
-  height: 80px;
-  width: 300px;
-  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.301));
-  border-radius: 4px;
-  border: solid darkgray 1px;
-}
 
 .footer {
   text-align: center;
@@ -100,4 +122,5 @@ body {
   color: white;
   background-image: url(pics/Black\ and\ Gold\ Graident.jpg);
   background-size: cover;
+  filter: drop-shadow(-.5px -.5px 2px  rgb(3, 3, 3))
 }
