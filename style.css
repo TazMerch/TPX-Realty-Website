@@ -1,21 +1,23 @@
 @keyframes fadeIn {
-  from{
+  0% {
     opacity: 0;
   }
-
-  to {
+  100% {
     opacity: 1;
   }
 }
 
-@keyframes fadeOut {
-  from{
-    opacity: 1;
+@keyframes loadScale {
+  0% {
+    transform: scale(150%);
   }
+  100% {
+    transform: scale(100%);
+  }
+}
 
-  to {
-    opacity: 0;
-  }
+html{
+  animation: fadeIn ease 1s;  
 }
 
 *{
@@ -25,6 +27,11 @@
 }
 
 body {
+  box-sizing: border-box;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 7vh 95vh auto;
+  overflow: auto;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
@@ -38,13 +45,23 @@ body {
   text-shadow: .5px .5px .5px rgb(100, 100, 100);
 }
 
-.hero {
+.content {
+  display: flex;
+  justify-content: center;
   overflow: visible;
-  height: 92vh;
+  height: 100%;
+
+}
+
+.heroimg {
+  height: 100%;
+  width: 100%;
+  align-self: center;
   background-image: url(pics/tpxlogo.png);
-  background-size: 80vh;
+  background-size: 80vh;  
   background-repeat: no-repeat;
   background-position: center;
+  animation: loadScale ease 700ms;
 }
 
 ul {
@@ -68,33 +85,38 @@ p {
   margin: 10px 0;
 }
 
-
 .navbar {
-  background-image: url(pics/Black\ and\ Gold\ Graident.jpg);
+  background-image: url(pics/header_pic.jpg);
   background-size: cover;
   color: white;
-  height: 30px;
-  filter: drop-shadow(.5px .5px 2px  rgb(3, 3, 3))
+  filter: drop-shadow(.5px .5px 2px rgb(3, 3, 3));
+  position: sticky;
+  top: 0;
 }
+
 .navbar ul{
   display: flex;
 }
 
 .navbar a {
+  height: 100%;
   color: white;
-  padding: 10px;
+  padding:  1em 1vw;
+  transition: 500ms;
+  font-size: 9px;
 }
 
 .navbar a:hover {
-  animation:fadeIn 1s;
+  opacity: 100%;
   background-color: #ddd;
   color: black;
+  font-size: 12px;
 }
 
 .navbar a.active{
-  animation: fadeOut 0s;
   background-color: darkgoldenrod;
   color: white;
+  font-size: 9px;
 }
 
 .navbar .flex {
@@ -111,16 +133,131 @@ p {
 .container {
   margin: 0 auto;
   overflow: auto;
-  padding: 0 10px;
+  padding: 0 9px;
 }
-
 
 .footer {
   text-align: center;
   font-size: 7px;
   padding: 10px;
   color: white;
-  background-image: url(pics/Black\ and\ Gold\ Graident.jpg);
+  background-image: url(pics/header_pic.jpg);
   background-size: cover;
   filter: drop-shadow(-.5px -.5px 2px  rgb(3, 3, 3))
+}
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-icon div {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px,);
+  transform: rotate(-45deg) translate(-6px, -6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px,);
+  transform: rotate(-45deg) translate(-6px, -6px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  /* height: calc(100vh - 40px); */
+  width: 100%;
+  background: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar nav {
+    display: none;
+  }
+
+  .heroimg {
+    overflow:visible;
+    position: relative;
+    max-height: 50vh;
+    width: 60%;
+    align-self: center;
+    background-image: url(pics/tpxlogo.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: loadScale ease 700ms;
+  }
+
+  h1 {
+    font-size: 6px;
+  }
+
+  .navbar a {
+    color: white;
+    padding: initial;
+    transition: initial;
+    font-size: initial;
+  }
+  
+  .navbar a:hover {
+    opacity: 100%;
+    background-color: initial;
+    color: initial;
+    font-size: initial;
+  }
+  
+  .navbar a.active{
+    background-color: initial;
+    color: initial;
+    font-size: initial;
+  }
+
+  .mobile-menu li {
+    background-color: rgb(43, 43, 43);
+    color: white;
+  }
+
+  .mobile-menu li:hover {
+    opacity: 100%;
+    background-color: rgb(210, 210, 210);
+    color: black;
+  }
+  
+  .mobile-menu li.active {
+    background-color: darkgoldenrod;
+    color: white;
+  }
+  
+  .mobile-menu a:hover {
+    font-size: 9px;
+    color: white;
+  }
+
+  .mobile-menu a {
+    font-size: 9px;
+    padding-left: 10px;
+  }
+  
 }
