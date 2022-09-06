@@ -150,6 +150,7 @@ p {
   margin: auto 0;
   display: none;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 #hamburger-icon div {
@@ -187,12 +188,12 @@ p {
   left: 0;
   width: 100%;
   background: rgb(37, 37, 37);
+  opacity: 100%;
 }
 
   .mobile-menu li {
   background-color: rgb(43, 43, 43);
   color: white;
-  transition: .5s;
 }
 
 .mobile-menu li:hover {
