@@ -150,7 +150,6 @@ p {
   margin: auto 0;
   display: none;
   cursor: pointer;
-  transition: 0.5s;
 }
 
 #hamburger-icon div {
@@ -178,7 +177,7 @@ p {
 .open .mobile-menu {
   display: block;
   flex-direction: column;
-  animation: fadeIn ease 1s;
+  animation: fadeIn ease .5s;
 }
 
 .mobile-menu {
@@ -188,7 +187,6 @@ p {
   left: 0;
   width: 100%;
   background: rgb(37, 37, 37);
-  opacity: 100%;
 }
 
   .mobile-menu li {
