@@ -30,11 +30,13 @@ body {
   box-sizing: border-box;
   height: 100vh;
   display: grid;
-  grid-template-rows: 70px auto auto;
+  grid-template-rows: 55px auto auto;
   overflow: auto;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
+  background-color: rgba(58, 58, 58, 0.634); /* Tint color */
+  background-blend-mode: multiply;
   background-image: url(pics/mainbackground.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -54,11 +56,7 @@ body {
   display: grid;
   grid-template-rows: auto auto;
   margin: 0 auto;
-}
-
-.contentContainer div:nth-last-of-type(2) {
-  display: flex;
-  background-color: rgba(200, 140, 0, 0.5); /* Tint color */
+  background-color: rgba(58, 58, 58, 0.634); /* Tint color */
   background-blend-mode: multiply;
   background-image: url(pics/abouthero.jpg);
   background-size: cover;
@@ -66,6 +64,10 @@ body {
   background-position-y: -50px;
   background-attachment: fixed;
   background-position: center;
+}
+
+.contentContainer div:nth-last-of-type(2) {
+  display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(255, 255, 255);
@@ -80,8 +82,10 @@ body {
   height: 100%;
   width: 100vw;
   background-color: rgb(255, 255, 255);
-  padding: 100px 15%;
-  filter: drop-shadow(.5px .5px 2px rgb(3, 3, 3));
+  padding: 75px 15%;
+  filter: drop-shadow(.5px .5px 3px rgb(3, 3, 3));
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 .contentContainer p {
@@ -140,7 +144,7 @@ p {
 .navbar a {
   height: 100%;
   color: white;
-  padding: 21px 20px;
+  padding: 13px 20px;
   transition: 500ms;
   font-size: 25px;
   transition: .5s;
@@ -173,7 +177,7 @@ p {
 .container {
   margin: 0 auto;
   overflow: auto;
-  padding: 0 9px;
+  padding: 0 17px;
 }
 
 .footer {
@@ -193,7 +197,7 @@ p {
 }
 
 #hamburger-icon div {
-  width: 40px;
+  width: 50px;
   height: 5px;
   background-color: white;
   margin: 10px 0;
@@ -323,7 +327,16 @@ p {
 
   .contentContainer div:nth-last-of-type(2) {
     font-size: 25px;
-    max-height: 150px;
+    height: 100%;
+    padding: 6%;
+  }
+  .contentContainer div:nth-last-of-type(1) {
+    padding: 10px 10%;
+    min-height: 100vh;
+  }
+
+  .contentContainer p {
+    font-size: 15px;
   }
 
 
