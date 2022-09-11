@@ -30,11 +30,13 @@ body {
   box-sizing: border-box;
   height: 100vh;
   display: grid;
-  grid-template-rows: 70px auto auto;
+  grid-template-rows: 50px auto auto;
   overflow: auto;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
+  background-color: rgba(58, 58, 58, 0.634); /* Tint color */
+  background-blend-mode: multiply;
   background-image: url(pics/mainbackground.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -50,15 +52,11 @@ body {
   justify-content: center;
 }
 
-.contentContainer {
+.aboutContainer {
   display: grid;
   grid-template-rows: auto auto;
   margin: 0 auto;
-}
-
-.contentContainer div:nth-last-of-type(2) {
-  display: flex;
-  background-color: rgba(200, 140, 0, 0.5); /* Tint color */
+  background-color: rgba(58, 58, 58, 0.634); /* Tint color */
   background-blend-mode: multiply;
   background-image: url(pics/abouthero.jpg);
   background-size: cover;
@@ -66,29 +64,76 @@ body {
   background-position-y: -50px;
   background-attachment: fixed;
   background-position: center;
+}
+
+.about-hero {
+  display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(255, 255, 255);
   font-size: 40px;
   text-align: center;
-  height: 50vh;
+  height: 30vh;
   width: auto;
   text-shadow: 0 0 12px black;
+  font-style: italic;
 }
 
-.contentContainer div:nth-last-of-type(1) {
+.about-wrapper {
   height: 100%;
   width: 100vw;
   background-color: rgb(255, 255, 255);
-  padding: 100px 15%;
+  padding: 60px 20%;
   filter: drop-shadow(.5px .5px 2px rgb(3, 3, 3));
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
-.contentContainer p {
+.about-writing {
+  border-bottom: rgb(208, 208, 208) solid 3px;
+  font-size: 20px;
   text-shadow: none;
   color: #333;
   text-transform: none;
+}
+
+.about-team-header {
+  padding-top:40px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  /* text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.641); */
+  color: rgb(88, 88, 88);
+}
+
+.about-card-container {
+  
+  display: grid;
+  grid-gap: 3em;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.about-card {
+  justify-self: center;
+  padding: 2em;
+  border-radius: 1em;
+  box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  background-color: white;
+}
+
+.about-card p {
+  margin: 0;
+  text-shadow: none;
   font-size: 20px;
+}
+
+.circle-pic-frame {
+  height: 15em;
+  width: 15em;
+  border-radius: 50%;
+  background: gray;
+  margin-bottom: 1em;
 }
 
 .heroimg {
@@ -117,7 +162,7 @@ h2 {
   font-weight: 300;
   line-height: 1.5;
   margin: 0px 0;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 p {
@@ -140,9 +185,9 @@ p {
 .navbar a {
   height: 100%;
   color: white;
-  padding: 21px 20px;
+  padding: 13px 15px;
   transition: 500ms;
-  font-size: 25px;
+  font-size: 20px;
   transition: .5s;
 }
 
@@ -150,13 +195,13 @@ p {
   opacity: 100%;
   background-color: #ddd;
   color: black;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .navbar a.active{
   background-color: darkgoldenrod;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .navbar .flex {
@@ -173,7 +218,7 @@ p {
 .container {
   margin: 0 auto;
   overflow: auto;
-  padding: 0 9px;
+  padding: 0 17px;
 }
 
 .footer {
@@ -193,7 +238,7 @@ p {
 }
 
 #hamburger-icon div {
-  width: 40px;
+  width: 50px;
   height: 5px;
   background-color: white;
   margin: 10px 0;
@@ -319,11 +364,6 @@ p {
 
   .navbar ul {
     display: none;
-  }
-
-  .contentContainer div:nth-last-of-type(2) {
-    font-size: 25px;
-    max-height: 150px;
   }
 
 
