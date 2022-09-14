@@ -17,7 +17,8 @@
 }
 
 html{
-  animation: fadeIn ease 1s;  
+  animation: fadeIn ease 1s;
+  scroll-behavior: smooth;
 }
 
 *{
@@ -30,7 +31,7 @@ body {
   box-sizing: border-box;
   height: 100vh;
   display: grid;
-  grid-template-rows: 50px auto auto;
+  /* grid-template-rows: 50px auto auto; */
   overflow: auto;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
@@ -50,11 +51,11 @@ body {
 .content {
   display: flex;
   justify-content: center;
+  height: 100%;
 }
 
 .aboutContainer {
   display: grid;
-  grid-template-rows: auto auto;
   margin: 0 auto;
   background-color: rgba(58, 58, 58, 0.634); /* Tint color */
   background-blend-mode: multiply;
@@ -78,6 +79,45 @@ body {
   text-shadow: 0 0 12px black;
   font-style: italic;
 }
+
+.testimonial-button {
+  display: grid;
+  position:absolute;
+  bottom: 0em;
+  align-items: center;
+  justify-items: center;
+  height: 70px;
+  width: auto;
+  opacity: 25%;
+  transition: 500ms;
+}
+
+#testimonial-arrow {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  bottom: 1.5em;
+  border-bottom: #ddd solid 3px;
+  border-right: #ddd solid 3px;
+  transform: rotate(45deg);
+}
+
+#test {
+  position: absolute;
+  bottom: 1.7em;
+  color: white;
+  font-size: 2em;
+}
+
+.testimonial-button:hover {
+  opacity: 100%;
+}
+
+#home-testimonials-wrapper {
+  height: 100vh;
+  background-color: rgb(34, 34, 34);
+}
+
 
 .about-wrapper {
   height: 100%;
@@ -107,7 +147,6 @@ body {
 }
 
 .about-card-container {
-  
   display: grid;
   grid-gap: 3em;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -137,15 +176,14 @@ body {
 }
 
 .heroimg {
-  height: 100%;
+  height: 93vh;
   width: 100%;
   align-self: center;
   background-image: url(pics/tpxlogo.png);
-  background-size: 80vh;  
+  background-size: 70vh;  
   background-repeat: no-repeat;
   background-position: center;
   animation: loadScale ease 700ms;
-  height: 97vh;
 }
 
 ul {
@@ -175,6 +213,7 @@ p {
   color: white;
   filter: drop-shadow(.5px .5px 2px rgb(3, 3, 3));
   position: sticky;
+  height: 5em;
   top: 0;
 }
 
@@ -185,7 +224,7 @@ p {
 .navbar a {
   height: 100%;
   color: white;
-  padding: 13px 15px;
+  padding: 19px 15px;
   transition: 500ms;
   font-size: 20px;
   transition: .5s;
@@ -268,7 +307,7 @@ p {
 .mobile-menu {
   display: none;
   position: absolute;
-  top: 70px;
+  top: 5em;
   left: 0;
   width: 100%;
   background: rgb(37, 37, 37);
