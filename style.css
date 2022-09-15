@@ -268,7 +268,17 @@ p {
   color: white;
   background-image: url(pics/header_pic.jpg);
   background-size: cover;
+  background-position: center;
   filter: drop-shadow(-.5px -.5px 2px  rgb(3, 3, 3))
+}
+
+.footer-social-container {
+  padding-bottom: .5em;
+}
+
+.footer-social-container img {
+  padding: 0 .5em;
+  width: 4em;
 }
 
 #hamburger-icon {
