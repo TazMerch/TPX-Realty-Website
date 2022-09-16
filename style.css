@@ -214,7 +214,7 @@ body {
 }
 
 .agent-contact-container {
-  padding: 3em;
+  padding: 36px 0;
   margin: 0;
   display: grid;
   grid-gap: 3em;
@@ -226,6 +226,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 460px;
+  min-width: 260px;
   padding: 1em;
   grid-gap: .3em;
   margin: 0;
