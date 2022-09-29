@@ -31,14 +31,13 @@ body {
   box-sizing: border-box;
   height: 100vh;
   display: grid;
-  /* grid-template-rows: 50px auto auto; */
   overflow: auto;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   background-color: rgba(58, 58, 58, 0.634); /* Tint color */
   background-blend-mode: multiply;
-  background-image: url(pics/mainbackground.jpg);
+  background-image: url(pics/SeqLivingroom.0252.png);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -48,10 +47,105 @@ body {
   text-shadow: .5px .5px .5px rgb(100, 100, 100);
 }
 
-.content {
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0px 0;
+  font-size: 20px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+.nav-header {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.pipeBar {
+  box-sizing: border-box;
+  background: white;
+  height: 1em;
+  width: .1em;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+
+.navbar {
+  background-image: url(pics/header_pic.jpg);
+  background-size: cover;
+  color: white;
+  filter: drop-shadow(.5px .5px 5px rgb(3, 3, 3));
+  /* position: sticky; */
+  height: 5em;
+  top: 0;
+}
+
+.navbar ul{
+  display: flex;
+}
+
+.navbar a {
+  height: 100%;
+  color: white;
+  padding: 19px 15px;
+  transition: 500ms;
+  font-size: 20px;
+  transition: .5s;
+}
+
+.navbar a:hover {
+  opacity: 100%;
+  background-color: #ddd;
+  color: black;
+  font-size: 20px;
+}
+
+.navbar a.active{
+  background-color: darkgoldenrod;
+  color: white;
+  font-size: 20px;
+}
+
+
+.flex {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 17px;
+}
+
+.heroimg {
+  height: 93vh;
+  width: 100%;
+  align-self: center;
+  background-image: url(pics/tpxlogo.png);
+  background-size: 70vh;  
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: loadScale ease 700ms;
 }
 
 .services-content {
@@ -59,11 +153,10 @@ body {
   justify-content: center;
   height: 100%;
   margin: 0;
-  background-color: rgb(34, 34, 34);
-  padding: 0 30em;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 20em;
-  grid-gap: 1em;
+  background-color: rgba(34, 34, 34, 0.584);
+  grid-template-columns: repeat(2, 445px);
+  grid-auto-rows: 305px;
+  /* grid-gap: 1em; */
 }
 
 .services-box {
@@ -71,29 +164,72 @@ body {
  align-items: center;
  justify-items: center;
  text-shadow: none;
- font-size: 15px;
+ font-size: 18px;
  color: rgb(191, 191, 191);
  padding: 3em;
  text-transform: none;
 }
 
 .services-box:nth-child(1) {
-  background: darkgoldenrod;
+  /* background: darkgoldenrod; */
+  background-image: url(pics/icon_investments.png);
+  background-position: cover;
+  background-repeat: no-repeat;
 }
+
 .services-box:nth-child(2) {
   
 }
+
 .services-box:nth-child(3) {
   
 }
+
 .services-box:nth-child(4) {
-  background: darkgoldenrod;
+  /* background: darkgoldenrod; */
+  background-image: url(pics/icon_propertymanagement.png);
+  background-position: cover;
+  background-repeat: no-repeat;
 }
+
 .services-box:nth-child(5) {
-  background: darkgoldenrod;
+  /* background: darkgoldenrod; */
+  background-image: url(pics/icon_buying.png);
+  background-position: cover;
+  background-repeat: no-repeat;
 }
+
 .services-box:nth-child(6) {
   
+}
+
+.services-box:nth-child(7) {
+}
+
+.services-box:nth-child(8) {
+  /* background: darkgoldenrod; */
+  background-image: url(pics/icon_selling.png);
+  background-position: cover;
+  background-repeat: no-repeat;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.testimonial-button {
+  display: grid;
+  position:absolute;
+  bottom: 0em;
+  align-items: center;
+  justify-items: center;
+  height: 70px;
+  width: auto;
+  opacity: 25%;
+  transition: 500ms;
+  z-index: 0;
 }
 
 .aboutContainer {
@@ -115,18 +251,6 @@ body {
   background: rgba(184, 135, 11, 0.308);
 }
 
-.testimonial-button {
-  display: grid;
-  position:absolute;
-  bottom: 0em;
-  align-items: center;
-  justify-items: center;
-  height: 70px;
-  width: auto;
-  opacity: 25%;
-  transition: 500ms;
-  z-index: 0;
-}
 
 #testimonial-arrow {
   position: absolute;
@@ -160,7 +284,7 @@ body {
   width: 100vw;
   background-color: rgb(34, 34, 34);
   padding: 60px 20%;
-  filter: drop-shadow(.5px .5px 2px rgb(3, 3, 3));
+  /* filter: drop-shadow(.5px .5px 2px rgb(3, 3, 3)); */
   /* border-top-left-radius: 12px;
   border-top-right-radius: 12px; */
 }
@@ -184,14 +308,14 @@ body {
 
 .about-card-container {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 5em;
   grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
 }
 
 .about-card {
   justify-self: center;
   padding: 2em;
-  border-radius: 1em;
+  border-radius: .3em;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.868);
   text-align: center;
   background-color: white;
@@ -224,25 +348,12 @@ body {
   margin: 0 auto;
 }
 
-.contact-hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(255, 255, 255);
-  font-size: 40px;
-  text-align: center;
-  height: 30vh;
-  width: auto;
-  text-shadow: 0 0 12px black;
-  font-style: italic;
-  background: rgba(184, 135, 11, 0.308);
-}
-
 .contact-content-container {
   width: 100vw;
   background-color: rgb(34, 34, 34);
   padding: 0 15%;
   filter: drop-shadow(.5px .5px 2px rgb(3, 3, 3));
+  z-index: -9999;
   /* border-top-left-radius: 12px;
   border-top-right-radius: 12px; */
 }
@@ -267,7 +378,7 @@ body {
 }
 
 .agent-contact-container {
-  padding: 36px 0;
+  padding: 8em 0;
   margin: 0;
   display: grid;
   grid-gap: 2em;
@@ -282,7 +393,7 @@ body {
   grid-gap: .3em;
   margin: 0;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.714);
-  border-radius: 1em;
+  border-radius: .3em;
   background: white;
   align-items: center;
 }
@@ -292,7 +403,7 @@ body {
   grid-row: 1 / span 6;
   height: 150px;
   width: 150px;
-  border-radius: 1em;
+  border-radius: .3em;
 }
 
 .contact-card-info-container {
@@ -321,92 +432,6 @@ body {
   width: 2em;
 }
 
-
-.heroimg {
-  height: 93vh;
-  width: 100%;
-  align-self: center;
-  background-image: url(pics/tpxlogo.png);
-  background-size: 70vh;  
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: loadScale ease 700ms;
-}
-
-ul {
-  list-style-type: none;
-  }
-
-a {
-  text-decoration: none;
-  color: #333;
-}
-
-h1,
-h2 {
-  font-weight: 300;
-  line-height: 1.5;
-  margin: 0px 0;
-  font-size: 20px;
-}
-
-p {
-  margin: 10px 0;
-}
-
-.navbar {
-  background-image: url(pics/header_pic.jpg);
-  background-size: cover;
-  color: white;
-  filter: drop-shadow(.5px .5px 2px rgb(3, 3, 3));
-  /* position: sticky; */
-  height: 5em;
-  top: 0;
-}
-
-.navbar ul{
-  display: flex;
-}
-
-.navbar a {
-  height: 100%;
-  color: white;
-  padding: 19px 15px;
-  transition: 500ms;
-  font-size: 20px;
-  transition: .5s;
-}
-
-.navbar a:hover {
-  opacity: 100%;
-  background-color: #ddd;
-  color: black;
-  font-size: 20px;
-}
-
-.navbar a.active{
-  background-color: darkgoldenrod;
-  color: white;
-  font-size: 20px;
-}
-
-.navbar .flex {
-  justify-content: space-between;
-}
-
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.container {
-  margin: 0 auto;
-  overflow: auto;
-  padding: 0 17px;
-}
-
 .footer {
   text-align: center;
   font-size: 15px;
@@ -415,7 +440,7 @@ p {
   background-image: url(pics/header_pic.jpg);
   background-size: cover;
   background-position: center;
-  filter: drop-shadow(-.5px -.5px 2px  rgb(3, 3, 3))
+  filter: drop-shadow(-.5px -.5px 5px  rgb(3, 3, 3))
 }
 
 .footer-social-container {
@@ -456,9 +481,9 @@ p {
 }
 
 .open .mobile-menu {
-  display: block;
-  flex-direction: column;
+  display: grid;
   animation: fadeIn ease .5s;
+  width: 100vw;
 }
 
 .mobile-menu {
@@ -466,24 +491,26 @@ p {
   position: absolute;
   top: 5em;
   left: 0;
-  width: 100%;
-  background: rgb(37, 37, 37);
+  background: rgba(37, 37, 37, 0);
 }
 
-  .mobile-menu li {
-  background-color: rgb(43, 43, 43);
+.mobile-menu li {
+  background-color: rgba(43, 43, 43, 0.849);
   color: white;
+  width: 100vw;
+  display: grid;
+  justify-items: center;
 }
 
 .mobile-menu li:hover {
   opacity: 100%;
-  background-color: rgb(210, 210, 210);
+  background-color: rgba(210, 210, 210, 0.74);
   color: black;
 }
 
-.mobile-menu li.active {
-  background-color: darkgoldenrod;
-  color: white;
+.mobile-menu a {
+  width: 100vw;
+  text-align: center;
 }
 
 @media (min-width: 1300px) {
@@ -520,37 +547,37 @@ p {
   }
 
   h1 {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   h2 {
-    font-size: 23px;
+    font-size: 20px;
   }
 
   .pipeBar {
     display: none;
   }
 
+  .nav-header {
+    display: initial;
+  }
+
   .navbar a {
-    font-size: 23px; 
-    padding: 0px 5px;
+    font-size: 18px; 
+    padding: 5px 5px;
   }
   
   .navbar a:hover {
     background-color: initial;
-    font-size: 23px;
-    padding: 0px 5px;
+    font-size: 18px;
+    padding: 5px 5px;
   }
   
   .navbar a.active{
     background-color: rgba(184, 135, 11, 0);
     color: white;
-    font-size: 23px;
-    padding: 0px 5px;
-  }
-
-  body {
-    grid-template-rows: 70px auto auto;
+    font-size: 18px;
+    padding: 5 5px;
   }
 
   #hamburger-icon {
@@ -561,4 +588,87 @@ p {
     display: none;
   }
 
+  .mobile-menu a:hover {
+    color: #333;
+  }
+
+  .about-hero {
+    font-size: 1.7em;
+  }
+
+}
+
+@media (max-width: 898px) {
+  .services-content {
+    display: grid;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    background-color: rgba(34, 34, 34, 0.584);
+    grid-template-columns: repeat(2, 222.5px);
+    grid-auto-rows: 152.5px;
+    /* grid-gap: 1em; */
+  }
+
+  .services-box {
+    font-size: 10px;
+   }
+
+   .services-box:nth-child(1) {
+    /* background: darkgoldenrod; */
+    background-image: url(pics/icon_investments_mobile.png);
+    background-position: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .services-box:nth-child(2) {
+    
+  }
+  
+  .services-box:nth-child(3) {
+    
+  }
+  
+  .services-box:nth-child(4) {
+    /* background: darkgoldenrod; */
+    background-image: url(pics/icon_propertymanagement_mobile.png);
+    background-position: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .services-box:nth-child(5) {
+    /* background: darkgoldenrod; */
+    background-image: url(pics/icon_buying_mobile.png);
+    background-position: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .services-box:nth-child(6) {
+    
+  }
+  
+  .services-box:nth-child(7) {
+  }
+  
+  .services-box:nth-child(8) {
+    /* background: darkgoldenrod; */
+    background-image: url(pics/icon_selling_mobile.png);
+    background-position: cover;
+    background-repeat: no-repeat;
+  }
+
+  .about-wrapper {
+    height: 100%;
+    width: 100vw;
+    background-color: rgb(34, 34, 34);
+    padding: 2em 10%;
+    /* filter: drop-shadow(.5px .5px 2px rgb(3, 3, 3)); */
+    /* border-top-left-radius: 12px;
+    border-top-right-radius: 12px; */
+  }
+  
+  .about-writing {
+    font-size: 17px;
+  }
+  
 }
