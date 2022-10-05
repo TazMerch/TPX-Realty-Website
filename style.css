@@ -148,7 +148,7 @@ p {
   animation: loadScale ease 700ms;
 }
 
-.services-content {
+#services-content {
   display: grid;
   justify-content: center;
   height: 100%;
@@ -159,7 +159,7 @@ p {
   /* grid-gap: 1em; */
 }
 
-.services-box {
+#services-box {
  display: flex;
  align-items: center;
  justify-items: center;
@@ -170,43 +170,43 @@ p {
  text-transform: none;
 }
 
-.services-box:nth-child(1) {
+#services-box:nth-child(1) {
   /* background: darkgoldenrod; */
   background-image: url(pics/icon_investments.png);
   background-position: cover;
   background-repeat: no-repeat;
 }
 
-.services-box:nth-child(2) {
+#services-box:nth-child(2) {
   
 }
 
-.services-box:nth-child(3) {
+#services-box:nth-child(3) {
   
 }
 
-.services-box:nth-child(4) {
+#services-box:nth-child(4) {
   /* background: darkgoldenrod; */
   background-image: url(pics/icon_propertymanagement.png);
   background-position: cover;
   background-repeat: no-repeat;
 }
 
-.services-box:nth-child(5) {
+#services-box:nth-child(5) {
   /* background: darkgoldenrod; */
   background-image: url(pics/icon_buying.png);
   background-position: cover;
   background-repeat: no-repeat;
 }
 
-.services-box:nth-child(6) {
+#services-box:nth-child(6) {
   
 }
 
-.services-box:nth-child(7) {
+#services-box:nth-child(7) {
 }
 
-.services-box:nth-child(8) {
+#services-box:nth-child(8) {
   /* background: darkgoldenrod; */
   background-image: url(pics/icon_selling.png);
   background-position: cover;
@@ -232,24 +232,6 @@ p {
   z-index: 0;
 }
 
-.aboutContainer {
-  display: grid;
-  margin: 0 auto;
-}
-
-.about-hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(255, 255, 255);
-  font-size: 30px;
-  text-align: center;
-  height: 30vh;
-  width: auto;
-  text-shadow: 0 0 12px black;
-  font-style: italic;
-  background: rgba(184, 135, 11, 0.308);
-}
 
 
 #testimonial-arrow {
@@ -278,6 +260,24 @@ p {
   background-color: rgb(34, 34, 34);
 }
 
+.aboutContainer {
+  display: grid;
+  margin: 0 auto;
+}
+
+.about-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  text-align: center;
+  height: 30vh;
+  width: auto;
+  text-shadow: 0 0 12px black;
+  font-style: italic;
+  background: rgba(184, 135, 11, 0.308);
+}
 
 .about-wrapper {
   height: 100%;
@@ -599,63 +599,61 @@ p {
 }
 
 @media (max-width: 898px) {
-  .services-content {
+
+  #services-content {
     display: grid;
     justify-content: center;
     height: 100%;
     margin: 0;
     background-color: rgba(34, 34, 34, 0.584);
-    grid-template-columns: repeat(2, 222.5px);
-    grid-auto-rows: 152.5px;
+    grid-template-columns: repeat(1, 445px);
+    grid-auto-rows: 305px;
     /* grid-gap: 1em; */
   }
 
-  .services-box {
-    font-size: 10px;
-   }
+#services-box:nth-child(1) {
+  /* background: darkgoldenrod; */
+  background-image: url(pics/icon_investments.png);
+  background-position: cover;
+  background-repeat: no-repeat;
+}
 
-   .services-box:nth-child(1) {
-    /* background: darkgoldenrod; */
-    background-image: url(pics/icon_investments_mobile.png);
-    background-position: cover;
-    background-repeat: no-repeat;
-  }
+#services-box:nth-child(2) {
   
-  .services-box:nth-child(2) {
-    
-  }
+}
+
+#services-box:nth-child(3) {
+  /* background: darkgoldenrod; */
+  background-image: url(pics/icon_propertymanagement.png);
+  background-position: cover;
+  background-repeat: no-repeat;
+}
+
+#services-box:nth-child(4) {
+  background: none;
+}
+
+#services-box:nth-child(5) {
+  /* background: darkgoldenrod; */
+  background-image: url(pics/icon_buying.png);
+  background-position: cover;
+  background-repeat: no-repeat;
+}
+
+#services-box:nth-child(6) {
   
-  .services-box:nth-child(3) {
-    
-  }
-  
-  .services-box:nth-child(4) {
-    /* background: darkgoldenrod; */
-    background-image: url(pics/icon_propertymanagement_mobile.png);
-    background-position: cover;
-    background-repeat: no-repeat;
-  }
-  
-  .services-box:nth-child(5) {
-    /* background: darkgoldenrod; */
-    background-image: url(pics/icon_buying_mobile.png);
-    background-position: cover;
-    background-repeat: no-repeat;
-  }
-  
-  .services-box:nth-child(6) {
-    
-  }
-  
-  .services-box:nth-child(7) {
-  }
-  
-  .services-box:nth-child(8) {
-    /* background: darkgoldenrod; */
-    background-image: url(pics/icon_selling_mobile.png);
-    background-position: cover;
-    background-repeat: no-repeat;
-  }
+}
+
+#services-box:nth-child(7) {
+  /* background: darkgoldenrod; */
+  background-image: url(pics/icon_selling.png);
+  background-position: cover;
+  background-repeat: no-repeat;
+}
+
+#services-box:nth-child(8) {
+  background: none;
+}
 
   .about-wrapper {
     height: 100%;
