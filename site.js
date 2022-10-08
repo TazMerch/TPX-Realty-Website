@@ -16,7 +16,7 @@ function toggleServicesPageMobileView(x) {
         servicesBoxText[2].innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet assumenda voluptatum culpa officia numquam non vitae veritatis neque. Est vero sit quos vel nostrum ex ipsam exercitationem, nemo quia aliquid!";
         servicesBoxText[7].innerHTML = '';
         servicesBoxText[6].innerHTML = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, a. Veritatis obcaecati qui beatae tenetur, ipsam officiis. Quidem laudantium, recusandae id voluptatem iure, illum, animi sapiente aliquid deserunt sunt ipsa!";
-
+        
     }
 }
 
