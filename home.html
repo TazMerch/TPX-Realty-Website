@@ -42,15 +42,66 @@
   <div class="content">
     <div class="heroimg"></div>
     <div class="testimonial-button">
-      <a id="test" href="#home-testimonials-wrapper">Testimonials</a>
+      <a id="test" href="#home-testimonials-wrapper">Zillow Reviews</a>
       <a id="testimonial-arrow" href="#home-testimonials-wrapper"></a>
     </div>
   </div>
+
   <section id="home-testimonials-wrapper">
-    <div>
+
+    <div class="carousel">
+
+      <button class="carousel__button carousel__button--left is-hidden">
+        <img src="pics/leftarrow.png" alt="">
+      </button>
+
+      <div class="carousel__track-container">
+        <ul class="carousel__track">
+          <li class="carousel__slide current-slide">
+            <a class="carousel__a" href="">
+              <img class="carousel__image" src="pics/review box - Greta Merchant.png" alt="Greta Merchant Review">
+            </a>
+          </li>
+          <li class="carousel__slide">
+            <a class="carousel__a" href="">
+              <img class="carousel__image" src="pics/review box -  Juan Osorio.png" alt="Juan Osorio Review">
+            </a>
+          </li>
+          <li class="carousel__slide">
+            <a class="carousel__a" href="">
+              <img class="carousel__image" src="pics/review box - ramonmartinez80.png" alt="Ramonmartinez80 Review">
+            </a>
+          </li>
+          <li class="carousel__slide">
+            <a class="carousel__a" href="">
+              <img class="carousel__image" src="pics/review box - scooter mock74.png" alt="ScooterMoock74 Review">
+            </a>
+          </li>
+          <li class="carousel__slide">
+            <a class="carousel__a" href="">
+              <img class="carousel__image" src="pics/review box - VeronicaBattaiola.png" alt="VeronicaBattaiola Review">
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <button class="carousel__button carousel__button--right">
+        <img src="pics/rightarrow.png" alt="">
+      </button>
+      
+      <div class="carousel__nav">
+        <button class="carousel__indicator current-slide"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
+      </div>
       
     </div>
+    
+
   </section>
+
   <div class="footer">
     <div class="footer-social-container">
       <a title="The Property Experts Realty Facebook" href="https://www.facebook.com/tonymaganathepropertyexpert">
@@ -69,6 +120,7 @@
     <div>Copyright 2022 © THE PROPERTY EXPERTS REALTY & INVESTMENTS INC. All Rights Reserved.</div>
   </div>
   <script src="site.js"></script>
+  <script src="carousel.js"></script>
 </body>
 
 </html>
