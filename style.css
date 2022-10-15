@@ -273,23 +273,35 @@ p {
   transform: translateY(-50%);
 }
 
+.carousel__a {
+  display: grid;
+  height: 100%;
+}
+
 .carousel__image {
-  width: 80%;
+  width: 70%;
   justify-self: center;
   align-self: center;
+}
+
+@media  (max-height: 600px) {
+  .carousel__image {
+    width: 50%;
+  }
 }
 
 .carousel__track-container {
   /* background-color: blue; */
   height: 100%;
   position: relative;
-  overflow: hidden;
-  padding: 20px 0;
+  overflow:hidden;
+  padding: 0px 0;
 }
 
 .carousel__track {
   padding: 0;
   margin: 0;
+  height: 100%;
   list-style: none;
   position: relative;
   transition: transform 250ms ease-in;
@@ -297,16 +309,11 @@ p {
 
 .carousel__slide {
   position: absolute;
-  top: 80px;
+  /* top: 0px; */
+  height: 100%;
   bottom: 0;
   width: 100%;
-  display: grid;
 }
-
-.carousel__a {
-  display: grid;
-}
-
 
 .carousel__button {
   position: absolute;
@@ -326,7 +333,7 @@ p {
 }
 
 .carousel__button img:hover {
-opacity: 100%;
+  opacity: 100%;
 }
 
 .carousel__button--left {
@@ -781,4 +788,60 @@ opacity: 100%;
     font-size: 17px;
   }
   
+  @media only screen and (max-width: 600px) {
+    .carousel {
+      position: relative;
+      height: 80vh;
+      width: 90%;
+      margin: 0 auto;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .carousel__a {
+      display: grid;
+      height: 100%;
+    }
+    
+    .carousel__image {
+      width: 100%;
+      justify-self: center;
+      align-self: center;
+    }
+    
+    .carousel__track-container {
+      /* background-color: blue; */
+      height: 100%;
+      position: relative;
+      overflow: auto;
+      padding: 0px 0;
+    }
+    
+    .carousel__track {
+      padding: 0;
+      margin: 0;
+      height: 60%;
+      list-style: none;
+      position: relative;
+      transition: transform 250ms ease-in;
+    }
+    
+    .carousel__slide {
+      position: initial;
+      /* top: 0px; */
+      height: 100%;
+      bottom: 0;
+      width: 100%;
+      border-bottom: rgb(165, 165, 165) solid 3px;
+    }
+    
+    .carousel__button {
+      display: none;
+    }
+    
+    
+    .carousel__nav {
+      display: none;
+    }
+  }
 }
