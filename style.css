@@ -1,23 +1,4 @@
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes loadScale {
-  0% {
-    transform: scale(150%);
-  }
-  100% {
-    transform: scale(100%);
-  }
-}
-
 html{
-  animation: fadeIn ease 1s;
   scroll-behavior: smooth;
 }
 
@@ -29,17 +10,17 @@ html{
 
 body {
   box-sizing: border-box;
-  height: 100vh;
+  width: 100vw;
   display: grid;
   overflow: auto;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
-  background-color: rgba(58, 58, 58, 0.634); /* Tint color */
+  background-color: rgba(34, 34, 34, 0.705); /* Tint color */
   background-blend-mode: multiply;
-  background-image: url(pics/SeqLivingroom.0252.png);
+  background-image: url(pics/SeqLivingroom.0252.jpg);
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment:fixed;
   background-position: center;
   background-repeat: no-repeat;
   line-height: 1.6;
@@ -69,6 +50,18 @@ p {
   margin: 10px 0;
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 15%;
+}
 .nav-header {
   display: flex;
   gap: 1em;
@@ -92,6 +85,7 @@ p {
   background-size: cover;
   color: white;
   filter: drop-shadow(.5px .5px 5px rgb(3, 3, 3));
+  -webkit-filter: drop-shadow(.5px .5px 5px rgb(3, 3, 3));
   /* position: sticky; */
   height: 5em;
   top: 0;
@@ -113,28 +107,16 @@ p {
   opacity: 100%;
   background-color: #ddd;
   color: black;
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 
 .navbar a.active{
   background-color: darkgoldenrod;
   color: white;
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 
 
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.container {
-  margin: 0 auto;
-  overflow: auto;
-  padding: 0 17px;
-}
 
 .heroimg {
   height: 93vh;
@@ -144,7 +126,6 @@ p {
   background-size: 70vh;  
   background-repeat: no-repeat;
   background-position: center;
-  animation: loadScale ease 700ms;
 }
 
 #services-content {
@@ -165,14 +146,13 @@ p {
  text-shadow: none;
  font-size: 20px;
  color: rgb(191, 191, 191);
- padding: 3em;
+ padding: 0 3em;
  text-transform: none;
 }
 
 #services-box:nth-child(1) {
   /* background: darkgoldenrod; */
   background-image: url(pics/icon_investments.png);
-  background-position: cover;
   background-repeat: no-repeat;
 }
 
@@ -187,14 +167,12 @@ p {
 #services-box:nth-child(4) {
   /* background: darkgoldenrod; */
   background-image: url(pics/icon_propertymanagement.png);
-  background-position: cover;
   background-repeat: no-repeat;
 }
 
 #services-box:nth-child(5) {
   /* background: darkgoldenrod; */
   background-image: url(pics/icon_buying.png);
-  background-position: cover;
   background-repeat: no-repeat;
 }
 
@@ -208,20 +186,24 @@ p {
 #services-box:nth-child(8) {
   /* background: darkgoldenrod; */
   background-image: url(pics/icon_selling.png);
-  background-position: cover;
   background-repeat: no-repeat;
 }
 
 .content {
   display: flex;
   justify-content: center;
-  height: 95vh;
+  height: 90vh;
+}
+
+.testimonial-button:hover {
+  opacity: 100%;
+
 }
 
 .testimonial-button {
   display: grid;
   position:absolute;
-  bottom: 0em;
+  /* bottom: 0em; */
   align-items: center;
   justify-items: center;
   height: 70px;
@@ -229,9 +211,8 @@ p {
   opacity: 25%;
   transition: 500ms;
   z-index: 0;
+  align-self: flex-end;
 }
-
-
 
 #testimonial-arrow {
   position: absolute;
@@ -252,9 +233,7 @@ p {
   bottom: 25px;
 }
 
-.testimonial-button:hover {
-  opacity: 100%;
-}
+
 
 #home-testimonials-wrapper {
   height: 100vh;
@@ -286,7 +265,12 @@ p {
 
 @media  (max-height: 600px) {
   .carousel__image {
-    width: 50%;
+    width: 80%;
+  }
+
+  .heroimg {
+    background-size: 70vh;
+    height: 70vh;
   }
 }
 
@@ -390,14 +374,15 @@ p {
   width: auto;
   text-shadow: 0 0 12px black;
   font-style: italic;
-  background: rgba(184, 135, 11, 0.308);
+  background: rgba(34, 34, 34, 0.308);
+
 }
 
 .about-wrapper {
   height: 100%;
   width: 100vw;
-  background-color: rgb(34, 34, 34);
-  padding: 60px 20%;
+  background-color: rgb(255, 255, 255);
+  padding: 60px 15%;
   /* filter: drop-shadow(.5px .5px 2px rgb(3, 3, 3)); */
   /* border-top-left-radius: 12px;
   border-top-right-radius: 12px; */
@@ -407,32 +392,40 @@ p {
   border-bottom: rgb(208, 208, 208) solid 3px;
   font-size: 20px;
   text-shadow: none;
-  color: rgb(191, 191, 191);
+  color: rgb(31, 31, 31);
   text-transform: none;
 }
 
 .about-team-header {
   padding-top:40px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   text-align: center;
   font-size: 30px;
   /* text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.641); */
-  color: rgb(191, 191, 191);
+  color: rgb(126, 126, 126);
+  text-shadow: none;
 }
 
 .about-card-container {
   display: grid;
   grid-gap: 5em;
+  grid-template-rows: auto;
   grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
 }
 
 .about-card {
   justify-self: center;
-  padding: 2em;
-  border-radius: .3em;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.868);
+  padding: 2em; 
+  border-radius: 1em;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.100));
+  -webkit-filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.100));
   text-align: center;
   background-color: white;
+}
+
+.about-contact-card-info-container {
+  margin: 0;
+  padding-top: 30px;
 }
 
 .about-card p {
@@ -451,10 +444,10 @@ p {
 .circle-pic-frame {
   height: 15em;
   width: 15em;
-  border: rgb(255, 255, 255) solid 6px;
   border-radius: 50%;
   background: gray;
-  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.211);
+  filter:drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.211));
+  -webkit-filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.211));
 }
 
 .content-wrapper {
@@ -465,9 +458,11 @@ p {
 
 .contact-content-container {
   width: 100vw;
-  background-color: rgb(34, 34, 34);
-  padding: 0 15%;
+  /* background-color: rgb(34, 34, 34); */
+  background-color: rgb(255, 255, 255);
+  /* padding: 0 15%; */
   filter: drop-shadow(.5px .5px 2px rgb(3, 3, 3));
+  -webkit-filter: drop-shadow(.5px .5px 2px rgb(3, 3, 3));
   z-index: -9999;
   /* border-top-left-radius: 12px;
   border-top-right-radius: 12px; */
@@ -476,24 +471,26 @@ p {
 .contact-address {
   border-bottom: rgb(208, 208, 208) solid 3px;
   font-size: 20px;
-  text-shadow: none;
-  color: rgb(255, 255, 255);
+  color: rgb(7, 7, 7);
   text-transform: uppercase;
   text-align: center;
   line-height: 1;
   padding: 3em 0;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.307);
+  margin: 0 15%;
+  text-shadow: none;
 }
 
 .contact-address p:nth-of-type(3) {
-  color: rgb(191, 191, 191);
+  color: rgb(94, 94, 94);
+  /* color: rgb(191, 191, 191); */
 }
 .contact-address p:nth-of-type(4) {
-  color: rgb(191, 191, 191);
+  color: rgb(94, 94, 94);
+  /* color: rgb(191, 191, 191); */
 }
 
 .agent-contact-container {
-  padding: 8em 0;
+  padding: 8em 15%;
   margin: 0;
   display: grid;
   grid-gap: 2em;
@@ -505,12 +502,13 @@ p {
   display: grid;
   padding: 1em;
   grid-template-columns: 1fr 1fr;
-  grid-gap: .3em;
+  /* grid-gap: .3em; */
   margin: 0;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.714);
-  border-radius: .3em;
+  filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.13)) ;
+  -webkit-filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.13));
+  border-radius: 1em;
   background: white;
-  align-items: center;
+  align-content: center;
 }
 
 .contact-card-img {
@@ -518,22 +516,26 @@ p {
   grid-row: 1 / span 6;
   height: 150px;
   width: 150px;
-  border-radius: .3em;
+  border-radius: 50%;
 }
 
 .contact-card-info-container {
   margin: 0;
+  height: 150px;
+  display: grid;
+  align-content: center;
 }
 
 .contact-card p {
   margin: 0;
-  padding-left: .5em;
+  padding-left: 1em;
   text-shadow: none;
   font-size: 15px;
 }
 
 .contact-card-social-bar {
  display: flex;
+ padding-left: 1em;
 }
 
 .contact-card-social-bar a {
@@ -555,7 +557,8 @@ p {
   background-image: url(pics/header_pic.jpg);
   background-size: cover;
   background-position: center;
-  filter: drop-shadow(-.5px -.5px 5px  rgb(3, 3, 3))
+  filter: drop-shadow(-.5px -.5px 5px  rgb(3, 3, 3));
+  -webkit-filter: drop-shadow(-.5px -.5px 5px  rgb(3, 3, 3));
 }
 
 .footer-social-container {
@@ -597,7 +600,6 @@ p {
 
 .open .mobile-menu {
   display: grid;
-  animation: fadeIn ease .5s;
   width: 100vw;
 }
 
@@ -610,7 +612,7 @@ p {
 }
 
 .mobile-menu li {
-  background-color: rgba(43, 43, 43, 0.849);
+  background-color: rgb(43, 43, 43);
   color: white;
   width: 100vw;
   display: grid;
@@ -640,33 +642,67 @@ p {
 }
 
 @media only screen and (max-width: 1300px) {
+
+  body {
+    background-image: none;
+  }
+
   nav {
     display: none;
   }
 
   .navbar {
     z-index: 9999;
+    height: 6em;
+  }
+
+  .mobile-menu{
+    display: none;
+    top: 6em;
+  }
+
+  .content {
+    background-image: url(pics/SeqLivingroom.0252.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 51.4%;
+    background-color: rgba(34, 34, 34, 0.877); /* Tint color */
+    background-blend-mode: multiply;
+    height: 92vh;
   }
 
   .heroimg {
     overflow:visible;
     position: relative;
-    max-height: 100vh;
+    top: -40px;
+    height: 40vh;
     width: 100%;
     align-self: center;
     background-image: url(pics/tpxlogo.png);
-    background-size:40vh;
+    background-size: 40vh;
     background-repeat: no-repeat;
     background-position: center;
-    animation: loadScale ease 700ms;
   }
 
   h1 {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 16px;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .container {
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 17px;
   }
 
   .pipeBar {
@@ -708,11 +744,30 @@ p {
   }
 
   .about-hero {
+    height: fit-content;
     font-size: 1.7em;
+    padding: 10% 5%;
   }
 
   .content-wrapper {
     min-height: initial;
+  }
+
+  .contact-address {
+    border-bottom: rgb(208, 208, 208) solid 3px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    padding: 3em 0;
+    margin: 0 9%;
+  }
+
+  .agent-contact-container {
+    padding: 5em 0%;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
 }
@@ -725,59 +780,59 @@ p {
     height: 100%;
     margin: 0;
     background-color: rgba(34, 34, 34, 0.584);
-    grid-template-columns: repeat(1, 445px);
-    grid-auto-rows: 305px;
+    grid-template-columns: repeat(1, auto);
+    grid-auto-rows: 260px;
     /* grid-gap: 1em; */
   }
 
-#services-box:nth-child(1) {
-  /* background: darkgoldenrod; */
-  background-image: url(pics/icon_investments.png);
-  background-position: cover;
-  background-repeat: no-repeat;
-}
+  #services-box {
+    background-size: 100%;
+    text-align: center;
+    padding: 30px;
+    font-size: 18px;
+    background-repeat: no-repeat;
+  }
 
-#services-box:nth-child(2) {
+
+  #services-box:nth-child(1) {
+    /* background: darkgoldenrod; */
+    background-image: url(pics/icon_investments.png);
+  }
+
+  #services-box:nth-child(2) {
   
-}
+  }
 
-#services-box:nth-child(3) {
-  /* background: darkgoldenrod; */
-  background-image: url(pics/icon_propertymanagement.png);
-  background-position: cover;
-  background-repeat: no-repeat;
-}
+  #services-box:nth-child(3) {
+    /* background: darkgoldenrod; */
+    background-image: url(pics/icon_propertymanagement.png);
+  }
 
-#services-box:nth-child(4) {
-  background: none;
-}
+  #services-box:nth-child(4) {
+    background: none;
+  }
 
-#services-box:nth-child(5) {
-  /* background: darkgoldenrod; */
-  background-image: url(pics/icon_buying.png);
-  background-position: cover;
-  background-repeat: no-repeat;
-}
+  #services-box:nth-child(5) {
+    /* background: darkgoldenrod; */
+    background-image: url(pics/icon_buying.png);
+  }
 
-#services-box:nth-child(6) {
+  #services-box:nth-child(6) {
   
-}
+  }
 
-#services-box:nth-child(7) {
-  /* background: darkgoldenrod; */
-  background-image: url(pics/icon_selling.png);
-  background-position: cover;
-  background-repeat: no-repeat;
-}
+  #services-box:nth-child(7) {
+    /* background: darkgoldenrod; */
+    background-image: url(pics/icon_selling.png);
+  }
 
-#services-box:nth-child(8) {
-  background: none
-}
+  #services-box:nth-child(8) {
+    background: none
+  }
 
   .about-wrapper {
     height: 100%;
     width: 100vw;
-    background-color: rgb(34, 34, 34);
     padding: 2em 10%;
     /* filter: drop-shadow(.5px .5px 2px rgb(3, 3, 3)); */
     /* border-top-left-radius: 12px;
@@ -789,9 +844,13 @@ p {
   }
   
   @media only screen and (max-width: 600px) {
+    #home-testimonials-wrapper {
+      height: auto;
+    }
+    
     .carousel {
       position: relative;
-      height: 80vh;
+      height: auto;
       width: 90%;
       margin: 0 auto;
       top: 50%;
@@ -827,12 +886,18 @@ p {
     }
     
     .carousel__slide {
+      padding: 60px 0;
       position: initial;
       /* top: 0px; */
       height: 100%;
       bottom: 0;
       width: 100%;
-      border-bottom: rgb(165, 165, 165) solid 3px;
+      border-top: rgb(165, 165, 165) solid 3px;
+    }
+
+    .carousel__slide:nth-child(1) {
+      border-top:none ;
+      
     }
     
     .carousel__button {
@@ -843,5 +908,14 @@ p {
     .carousel__nav {
       display: none;
     }
+  }
+}
+
+@media  (max-height: 600px) {
+
+  .heroimg {
+    background-size: 50vh;
+    height: 50vh;
+    top: -30px;
   }
 }
