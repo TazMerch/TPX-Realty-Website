@@ -134,8 +134,8 @@ p {
   height: 100%;
   margin: 0;
   background-color: rgba(34, 34, 34, 0.584);
-  grid-template-columns: repeat(2, 445px);
-  grid-auto-rows: 305px;
+  grid-template-columns: repeat(2, auto);
+  grid-auto-rows: 25.4em;
   /* grid-gap: 1em; */
 }
 
@@ -772,7 +772,7 @@ p {
 
 }
 
-@media (max-width: 898px) {
+@media (max-width: 667px) {
 
   #services-content {
     display: grid;
@@ -781,7 +781,7 @@ p {
     margin: 0;
     background-color: rgba(34, 34, 34, 0.584);
     grid-template-columns: repeat(1, auto);
-    grid-auto-rows: 260px;
+    grid-auto-rows: 31vh;
     /* grid-gap: 1em; */
   }
 
