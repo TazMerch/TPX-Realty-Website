@@ -16,6 +16,6 @@ function toggleServicesPageMobileView(x) {
     }
 }
 
-var x = window.matchMedia("(max-width: 667px)")
+var x = window.matchMedia("(max-width: 924px)")
 toggleServicesPageMobileView(x)
 x.addListener(toggleServicesPageMobileView)
